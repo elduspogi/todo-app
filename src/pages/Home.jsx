@@ -3,26 +3,18 @@ import Content from '../components/Content';
 import Empty from '../components/Empty';
 
 const Home = () => {
-	const [ open, setOpen ] = useState(true);
+	const [ open, setOpen ] = useState(localStorage.getItem("open"));
 
-
+	useEffect(() => {
+		setOpen(open);
+	}, [open]);
 	const content = open ? <Content /> : <Empty />;
-
-	// useEffect(() => {
-	// 	const buttons = open ? (
-	// 		<div className='flex flex-row gap-1'>
-	// 			<button className='cancel'>Cancel</button>
-	// 			<button className='save'>Save</button>
-	// 		</div>
-	// 	) :
-	// 	<button className='save'>Edit</button>;
-	// }, [open]);
 
 	return (
 		<>
 			<div className="container">
 				<header>
-					<h1>Mock Title</h1>
+					<h1>To Do List</h1>
 				</header>
 
 				{content}
