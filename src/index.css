@@ -1,0 +1,94 @@
+:root {
+	--one: #faf0ef;
+	--two: #faf0ef;
+	--three: #d2c9ca;
+	--four: #e4bc97;
+	--five: #b6a08b;
+	--six: #9d8065;
+	--seven: #d4d8e5;
+	--eight: #0a1f56;
+	--nine: #555555;
+	--ten: #333333;
+}
+
+* {
+	font-family: 'Times New Roman', Times, serif;
+	color: var(--eight);
+}
+
+body {
+	background-image: url("./assets/hero-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-clip: content-box;
+}
+
+.container {
+	padding: 50px 200px;
+}
+
+header h1 {
+	font-size: 2.5em;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		padding: 20px 30px;
+	}
+}
+
+.empty {
+	border: 2px solid var(--four);
+	padding: 30px 40px;
+	margin: 10px 0;
+	border-radius: 20px;
+	font-size: 1.5em;
+}
+
+.empty p {
+	color: var(--ten);
+}
+
+.empty p span {
+	color: var(--four);
+	border-bottom: 1px solid var(--four);
+}
+
+.content {
+	padding: 10px;
+	border-top: 2px solid var(--five);
+}
+
+footer {
+	border-top: 2px solid var(--five);
+	padding-top: 5px;
+}
+
+footer button {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px 15px;
+	border-radius: 10px;
+}
+
+footer button.cancel {
+	background-color: transparent;
+	border: 2px solid var(--eight);
+}
+
+footer button.save {
+	background-color: var(--four);
+	color: var(--two);
+}
+
+.input {
+	border: 2px solid var(--five);
+	border-radius: 50px;
+}
+
+.input-text {
+	border-bottom: 2px solid var(--six);
+}
+
+#inputText:focus {
+	border: none !important;
+}
